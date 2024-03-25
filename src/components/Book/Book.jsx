@@ -5,16 +5,17 @@ const Book = ({ book }) => {
   return (
     <div className="border p-4 space-y-2 rounded-lg shadow-md">
       <img className="w-full h-60 p-2 rounded-2xl" src={image} alt="" />
-      <div className="flex gap-8">
+      <div className="flex gap-4">
         {tags.map((tag, idx) => (
-          <p key={idx} className="text-[#23BE0A] font-semibold">
-            {tag}
-          </p>
+          <div key={idx} className="bg-slate-100 rounded-full"><p className="text-[#23BE0A] font-semibold px-5 py-2">
+          {tag}
+        </p></div>
         ))}
       </div>
       <h2 className="text-xl font-bold">{bookName}</h2>
-      <p>By: {author}</p>
-      <div className="flex justify-between pt-4">
+      <p className="pb-2">By: <span className="font-medium">{author}</span></p>
+      <hr className="border border-dashed"/>
+      <div className="flex justify-between pt-2">
         <p>{category}</p>
         <div className="flex gap-2 items-center">
           <p>{rating}</p>
