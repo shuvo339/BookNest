@@ -1,0 +1,80 @@
+[
+    {
+        "bookId": "001",
+        "bookName": "The Silent Patient",
+        "author": "Alex Michaelides",
+        "image": "https://i.ibb.co/Fmm8z6V/the-silent-patient.jpg",
+        "review": "A gripping psychological thriller that will keep you guessing until the very end.",
+        "totalPages": 336,
+        "rating": 4.5,
+        "category": "Mystery",
+        "tags": ["Suspense", "Psychological"],
+        "publisher": "Celadon Books",
+        "yearOfPublishing": 2019
+    },
+    {
+        "bookId": "002",
+        "bookName": "Educated",
+        "author": "Tara Westover",
+        "image": "https://i.ibb.co/GkH44Qv/Educated.png",
+        "review": "An astonishing memoir about overcoming obstacles through education.",
+        "totalPages": 352,
+        "rating": 4.7,
+        "category": "Biography",
+        "tags": ["Memoir", "Inspiring"],
+        "publisher": "Random House",
+        "yearOfPublishing": 2018
+    },
+    {
+        "bookId": "003",
+        "bookName": "Where the Crawdads Sing",
+        "author": "Delia Owens",
+        "image": "https://i.ibb.co/dMtfyXL/where-the-crawdads-sing.jpg",
+        "review": "A beautifully written novel that blends mystery, romance, and nature.",
+        "totalPages": 384,
+        "rating": 4.6,
+        "category": "Fiction",
+        "tags": ["Romance", "Mystery"],
+        "publisher": "G.P. Putnam's Sons",
+        "yearOfPublishing": 2018
+    },
+    {
+        "bookId": "004",
+        "bookName": "Becoming",
+        "author": "Michelle Obama",
+        "image": "https://i.ibb.co/WvztMYc/DSC-3358.jpg",
+        "review": "An inspiring memoir that offers insights into life, leadership, and resilience.",
+        "totalPages": 448,
+        "rating": 4.8,
+        "category": "Biography",
+        "tags": ["Memoir", "Empowering"],
+        "publisher": "Crown Publishing Group",
+        "yearOfPublishing": 2018
+    },
+    {
+        "bookId": "005",
+        "bookName": "The Night Circus",
+        "author": "Erin Morgenstern",
+        "image": "https://i.ibb.co/db0Hmf6/download.jpg",
+        "review": "A magical tale filled with enchanting imagery and captivating storytelling.",
+        "totalPages": 400,
+        "rating": 4.4,
+        "category": "Fantasy",
+        "tags": ["Magic", "Romance"],
+        "publisher": "Doubleday",
+        "yearOfPublishing": 2011
+    },
+    {
+        "bookId": "006",
+        "bookName": "The Power of Habit",
+        "author": "Charles Duhigg",
+        "image": "https://i.ibb.co/r3VQ0QJ/czwnz-512.webp",
+        "review": "A fascinating exploration of how habits shape our lives and how they can be changed.",
+        "totalPages": 400,
+        "rating": 4.3,
+        "category": "Self-Help",
+        "tags": ["Psychology", "Productivity"],
+        "publisher": "Random House",
+        "yearOfPublishing": 2012
+    }
+]
