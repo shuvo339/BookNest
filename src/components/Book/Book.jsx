@@ -1,13 +1,19 @@
 import PropTypes from "prop-types";
 import { FaRegStar } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 const Book = ({ book }) => {
-  const { image, tags, bookName, author, category, rating } = book;
+  const {bookId, image, tags, bookName, author, category, rating } = book;
+  const navigate = useNavigate();
+  const handleJobDetails=id=>{
+    navigate(`/book/${id}`)
+    console.log(id)
+  }
   return (
-    <div className="border p-4 space-y-2 rounded-lg shadow-md">
+    <div onClick={()=>handleJobDetails(bookId)} className="border p-4 space-y-2 rounded-lg shadow-md">
       <img className="w-full h-60 p-2 rounded-2xl" src={image} alt="" />
       <div className="flex gap-4">
         {tags.map((tag, idx) => (
-          <div key={idx} className="bg-slate-100 rounded-full"><p className="text-[#23BE0A] font-semibold px-5 py-2">
+          <div key={idx} className="bg-pink-50 rounded-full"><p className="text-[#23BE0A] font-semibold px-5 py-2">
           {tag}
         </p></div>
         ))}

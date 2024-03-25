@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import bookimg from "../../assets/books.png";
 
 const Banner = () => {
@@ -8,10 +9,9 @@ const Banner = () => {
           src={bookimg}
           className="rounded-lg"
         />
-        <div className="lg:space-y-16 space-y-6">
-          <h1 className="lg:text-5xl text-4xl font-bold">Refreshing Additions <br />for Your Bookshelf</h1>
-          
-          <button className="btn bg-[#23BE0A] px-4 text text-white">View The List</button>
+        <div>
+          <h1 className="lg:text-5xl text-4xl font-bold pb-12">Refreshing Additions <br />for Your Bookshelf</h1>
+          <Link to="/listedbook"><button className="btn bg-[#23BE0A] px-4 text text-white">View The List</button></Link>
         </div>
       </div>
     </div>
