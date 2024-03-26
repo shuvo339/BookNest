@@ -24,6 +24,7 @@ export const router = createBrowserRouter([
         },
         {
           path: "/listedbook",
+          loader: ()=> fetch('/books.json'),
           element: <ListedBooks></ListedBooks>,
           children: [
             {
@@ -40,6 +41,7 @@ export const router = createBrowserRouter([
         },
         {
           path: "/pagestoread",
+          loader: ()=> fetch('/books.json'),
           element: <PagesToRead></PagesToRead>,
         },
         {

@@ -38,10 +38,10 @@ const ReadBook = ({book}) => {
                 <hr className="my-3"/>
                 <div className="flex lg:flex-row flex-col gap-6">
                     <div className="flex gap-4">
-                    <div className="bg-blue-100 rounded-full">
+                    <div className="bg-blue-100 flex justify-center items-center rounded-full">
                         <h2 className="px-4 py-2 text-blue-600">Category: {category}</h2>
                     </div>
-                    <div className="bg-pink-100 rounded-full">
+                    <div className="bg-pink-100 flex justify-center items-center rounded-full">
                         <h2 className="px-6 py-2 text-pink-500">Rating: {rating}</h2>
                     </div>
                     </div>

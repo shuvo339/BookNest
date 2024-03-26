@@ -1,44 +1,53 @@
+import { useEffect, useState } from "react";
+import { useLoaderData } from "react-router-dom";
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from "recharts";
+import { getReadBooksFromLS } from "../../Utils/ReadBooksLS";
 
 const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
 
+
+
+
 const PagesToRead = () => {
+
+  const [readbooks, setReadBooks] = useState([]);
+  const books = useLoaderData();
+  useEffect(()=>{
+      const storedReadBookIds = getReadBooksFromLS();
+      if(storedReadBookIds){
+          const storedReadBooks = books?.filter(book=>storedReadBookIds.includes(book.bookId));
+          setReadBooks(storedReadBooks)
+      }
+  }, [])
+  
+  let pages = readbooks?.map(book=>book.totalPages);
+  let name = readbooks?.map(book=>book.bookName);
+ 
+console.log(name)
   const data = [
     {
-      name: "The Silent Patient",
-      uv: 336,
-      pv: 2400,
-      amt: 2400,
+      name: `${name[0]? name[0]: ''}`,
+      uv: `${pages[0]? pages[0]:''}`,
     },
     {
-      name: "Educated",
-      uv: 352,
-      pv: 1398,
-      amt: 2210,
+      name: `${name[1]? name[1]: ''}`,
+      uv: `${pages[1]? pages[1]:''}`,
     },
     {
-      name: "Where the Crawdads Sing",
-      uv: 384,
-      pv: 9800,
-      amt: 2290,
+      name: `${name[2]? name[2]: ''}`,
+      uv: `${pages[2]? pages[2]:''}`,
     },
     {
-      name: "Becoming",
-      uv: 448,
-      pv: 3908,
-      amt: 2000,
+      name: `${name[3]? name[3]: ''}`,
+      uv: `${pages[3]? pages[3]:''}`,
     },
     {
-      name: "The Night Circus",
-      uv: 400,
-      pv: 4800,
-      amt: 2181,
+      name: `${name[4]? name[4]: ''}`,
+      uv: `${pages[4]? pages[4]:''}`,
     },
     {
-      name: "The Power of Habit",
-      uv: 400,
-      pv: 3800,
-      amt: 2500,
+      name: `${name[5]? name[5]: ''}`,
+      uv: `${pages[5]? pages[5]:''}`,
     },
   ];
 
@@ -63,7 +72,7 @@ const PagesToRead = () => {
   return (
     <div className="flex justify-center my-10">
       <BarChart
-        width={1050}
+        width={1100}
         height={400}
         data={data}
         margin={{
