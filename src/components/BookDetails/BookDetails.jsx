@@ -1,9 +1,19 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { saveReadBooksToLS } from "../../Utils/ReadBooksLS";
+import { saveWishlistToLS } from "../../Utils/WishlistLS";
 
-const JobDetails = () => {
+const BookDetails = () => {
   const books = useLoaderData();
   const { id } = useParams();
   const book = books?.find((book) => book.bookId == id);
+  const handleReadBooks=(id)=>{
+    saveReadBooksToLS(id);
+  }
+  const handleWishlist=(id)=>{
+    saveWishlistToLS(id);
+  }
+
+
   return (
     <div className="grid lg:grid-cols-2 gap-8 mt-5 mb-10 space-y-4">
       <div>
@@ -61,8 +71,8 @@ const JobDetails = () => {
 
 
       <div className="flex gap-3 pt-3">
-        <button className="btn border-2 border-slate-200 bg-transparent rounded-lg hover:bg-[#23BE0A]">Read</button>
-        <button className="btn border border-slate-300 bg-blue-300 rounded-lg hover:bg-[#23BE0A]">Wishlist</button>
+        <button onClick={()=>handleReadBooks(id)} className="btn border-2 border-slate-200 bg-transparent rounded-lg hover:bg-[#23BE0A]">Read</button>
+       <button onClick={()=>handleWishlist(id)} className="btn border border-slate-300 bg-blue-300 rounded-lg hover:bg-[#23BE0A]">Wishlist</button>
       </div>
 
       </div>
@@ -70,4 +80,4 @@ const JobDetails = () => {
   );
 };
 
-export default JobDetails;
+export default BookDetails;
