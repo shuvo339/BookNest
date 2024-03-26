@@ -1,0 +1,34 @@
+[
+    {
+      "id": 1,
+      "title": "10 Must-Read Mystery Novels of All Time",
+      "author": "Jane Doe",
+      "date": "25-03-2024",
+      "category": "Book Recommendations",
+      "tags": ["Mystery", "Books"]
+    },
+    {
+      "id": 2,
+      "title": "Interview with Bestselling Author John Smith",
+      "author": "John Doe",
+      "date": "20-03-2024",
+      "category": "Author Interviews",
+      "tags": ["Author", "Interview"]
+    },
+    {
+      "id": 3,
+      "title": "The Impact of Technology on Reading Habits",
+      "author": "Alice Johnson",
+      "date": "15-03-2024",
+      "category": "Book Trends",
+      "tags": ["Technology", "Reading"]
+    },
+    {
+      "id": 4,
+      "title": "Book Review: 'The Night Circus' by Erin Morgenstern",
+      "author": "Bob Smith",
+      "date": "10-03-2024",
+      "category": "Book Reviews",
+      "tags": ["Book Review", "Fantasy"]
+    }
+  ]

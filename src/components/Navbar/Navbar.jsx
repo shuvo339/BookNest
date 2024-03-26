@@ -6,6 +6,8 @@ const Navbar = () => {
       <li><NavLink className={({isActive})=>isActive? 'px-3 py-2 rounded-lg border border-[#23BE0A] text-[#23BE0A]':'border px-3 py-2 rounded-xl'} to="/">Home</NavLink></li>
         <li><NavLink className={({isActive})=>isActive? 'px-3 py-2 rounded-lg border border-[#23BE0A] text-[#23BE0A]':'border px-3 py-2 rounded-xl'} to="/listedbook">Listed Books</NavLink></li>
         <li><NavLink className={({isActive})=>isActive? 'px-3 py-2 rounded-lg border border-[#23BE0A] text-[#23BE0A]':'border px-3 py-2 rounded-xl'}  to="/pagestoread">Pages to Read</NavLink></li>
+        <li><NavLink className={({isActive})=>isActive? 'px-3 py-2 rounded-lg border border-[#23BE0A] text-[#23BE0A]':'border px-3 py-2 rounded-xl'}  to="/blogs">Blogs</NavLink></li>
+        <li><NavLink className={({isActive})=>isActive? 'px-3 py-2 rounded-lg border border-[#23BE0A] text-[#23BE0A]':'border px-3 py-2 rounded-xl'}  to="/user">User Profile</NavLink></li>
       
     </>
   );
@@ -39,7 +41,7 @@ const Navbar = () => {
         <Link to="/" className="btn btn-ghost text-2xl font-bold">BookNest</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className=" menu-horizontal px-1 gap-2">{links}</ul>
+        <ul className=" menu-horizontal px-1 gap-1">{links}</ul>
       </div>
       <div className="navbar-end gap-2 ">
         <a className="btn text-white px-4 bg-[#23BE0A] rounded-lg">Sign In</a>

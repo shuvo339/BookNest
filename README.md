@@ -1,8 +1,13 @@
-# React + Vite
+# B9A8-BookNest
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Top features of the website
+* Extensive book catalog with diverse genres
+* Seamless book search and filtering options
+* Book summaries and excerpts for quick previews
+* User reviews and ratings for informed decisions
+* Mobile-friendly design for on-the-go reading.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## [ Private Repo Link](https://github.com/programming-hero-web-course-4/b9a8-book-vibe-shuvo339)
+## [ Live Link]()
+

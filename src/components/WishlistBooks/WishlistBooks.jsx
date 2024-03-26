@@ -6,7 +6,6 @@ import WishBook from "../WishBook/WishBook";
 
 const WishlistBooks = () => {
     const books = useLoaderData();
-    console.log(books)
     const [wishlist, setWishlist] = useState([]);
     useEffect(()=>{
         const storedWishlistIds = getWishlistFromLS();
@@ -15,7 +14,6 @@ const WishlistBooks = () => {
             setWishlist(storedWishlist)
         }
     }, [])
-    console.log(wishlist)
 
     return (
         <div className="grid gap-4 my-4">
