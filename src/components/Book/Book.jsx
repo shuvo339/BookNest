@@ -6,7 +6,6 @@ const Book = ({ book }) => {
   const navigate = useNavigate();
   const handleJobDetails=id=>{
     navigate(`/book/${id}`)
-    console.log(id)
   }
   return (
     <div onClick={()=>handleJobDetails(bookId)} className="border p-4 space-y-2 rounded-lg shadow-md">

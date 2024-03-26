@@ -3,8 +3,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 const JobDetails = () => {
   const books = useLoaderData();
   const { id } = useParams();
-  console.log(books);
-  const book = books.find((book) => book.bookId == id);
+  const book = books?.find((book) => book.bookId == id);
   return (
     <div className="grid lg:grid-cols-2 gap-8 mt-5 mb-10 space-y-4">
       <div>
