@@ -1,8 +1,15 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 
 const ListedBooks = () => {
+  const navigate = useNavigate();
+  const handleReadBooks=()=>{
+    navigate('');
+  }
+  const handleWishlist=()=>{
+    navigate(`wishlist`)
+  }
   return (
     <div>
       <div className="bg-pink-50 flex justify-center items-center py-10 rounded-xl">
@@ -16,8 +23,8 @@ const ListedBooks = () => {
       {/* Tabs  */}
       <Tabs>
         <TabList>
-          <Tab><Link to=''>Read Books</Link></Tab>
-          <Tab><Link to={`wishlist`}>Wishlist Books</Link></Tab>
+          <Tab onClick={handleReadBooks}>Read Books</Tab>
+          <Tab onClick={handleWishlist}>Wishlist Books</Tab>
           
         </TabList>
 

@@ -1,8 +1,9 @@
-import PropTypes from "prop-types";
-import { MdOutlineEditLocation, MdOutlineFindInPage } from "react-icons/md";
 import { HiOutlineUsers } from "react-icons/hi2";
+import { MdOutlineEditLocation, MdOutlineFindInPage } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
-const ReadBook = ({book}) => {
+import { PropTypes } from 'prop-types';
+
+const WishBook = ({book}) => {
     const {bookId, image, tags, bookName, author, category, rating,yearOfPublishing, publisher, totalPages} = book;
     const navigate = useNavigate();
     const handleViewDetails=id=>{
@@ -52,7 +53,8 @@ const ReadBook = ({book}) => {
     );
 };
 
-ReadBook.propTypes = {
+WishBook.propTypes = {
     book: PropTypes.object,
   };
-export default ReadBook;
+
+export default WishBook;
