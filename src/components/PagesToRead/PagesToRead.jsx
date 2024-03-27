@@ -61,7 +61,7 @@ const PagesToRead = () => {
         }}
       >
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis className="text-xs font-semibold" angle={19} dataKey="name" />
+        <XAxis className="text-xs font-semibold"  dataKey="name" />
         <YAxis />
         <Bar
           dataKey="uv"
