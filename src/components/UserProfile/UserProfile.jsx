@@ -21,7 +21,7 @@ const UserProfile = () => {
        <button onClick={handleReadlist} className="text-[#23BE0A] font-semibold underline">Wishlist</button>
       </div>
         <button className='btn bg-[#23BE0A] text-white'>Edit Profile</button>
-        <div className='bg-pink-200 rounded-xl'><h2 className='py-2 px-4 font-semibold'>Joined at March, 2024</h2></div>
+        <div className='bg-slate-100 rounded-xl'><h2 className='py-2 px-4 font-semibold'>Joined at March, 2024</h2></div>
     </div>
   );
 };

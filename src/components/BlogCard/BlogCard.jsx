@@ -10,7 +10,7 @@ const BlogCard = ({blog}) => {
             <div className="flex gap-4 items-center pt-4 pb-2">
                 <p className="font-semibold">Tags</p>
                 {tags.map((tag, idx) => (
-            <div key={idx} className="bg-pink-50 rounded-full">
+            <div key={idx} className="bg-blue-100 rounded-full">
               <p className="text-[#23BE0A] font-semibold px-5 py-2">#{tag}</p>
             </div>
           ))}

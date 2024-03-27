@@ -20,36 +20,15 @@ const PagesToRead = () => {
       }
   }, [])
   
-  let pages = readbooks?.map(book=>book.totalPages);
-  let name = readbooks?.map(book=>book.bookName);
- 
-console.log(name)
-  const data = [
-    {
-      name: `${name[0]? name[0]: ''}`,
-      uv: `${pages[0]? pages[0]:''}`,
-    },
-    {
-      name: `${name[1]? name[1]: ''}`,
-      uv: `${pages[1]? pages[1]:''}`,
-    },
-    {
-      name: `${name[2]? name[2]: ''}`,
-      uv: `${pages[2]? pages[2]:''}`,
-    },
-    {
-      name: `${name[3]? name[3]: ''}`,
-      uv: `${pages[3]? pages[3]:''}`,
-    },
-    {
-      name: `${name[4]? name[4]: ''}`,
-      uv: `${pages[4]? pages[4]:''}`,
-    },
-    {
-      name: `${name[5]? name[5]: ''}`,
-      uv: `${pages[5]? pages[5]:''}`,
-    },
-  ];
+  const data = readbooks?.map(book=>{
+    return {
+      name: book.bookName,
+      uv: book.totalPages,
+    }
+  });
+
+    // name: {name},
+
 
   const getPath = (x, y, width, height) => {
     return `M${x},${y + height}C${x + width / 3},${y + height} ${

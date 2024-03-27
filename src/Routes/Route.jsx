@@ -5,10 +5,10 @@ import ErrorPage from "../components/ErrorPage/ErrorPage";
 import ListedBooks from "../components/ListedBooks/ListedBooks";
 import PagesToRead from "../components/PagesToRead/PagesToRead";
 import BookDetails from "../components/BookDetails/BookDetails";
-import WishlistBooks from "../components/WishlistBooks/WishlistBooks";
-import ReadBooks from "../components/ReadBooks/ReadBooks";
 import UserProfile from './../components/UserProfile/UserProfile';
 import Blogs from "../components/Blogs/Blogs";
+import WishBook from "../components/WishBook/WishBook";
+import ReadBook from "../components/ReadBook/ReadBook";
 
 
 
@@ -28,14 +28,12 @@ export const router = createBrowserRouter([
           element: <ListedBooks></ListedBooks>,
           children: [
             {
-              index: true,
-              loader: ()=> fetch('/books.json'),
-              element: <ReadBooks></ReadBooks>,
+              path: 'read',
+              element: <ReadBook></ReadBook>,
             },
             {
               path: 'wishlist',
-              loader: ()=> fetch('/books.json'),
-              element: <WishlistBooks></WishlistBooks>,
+              element: <WishBook></WishBook>,
             },
           ],
         },
