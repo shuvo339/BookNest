@@ -14,7 +14,7 @@ const ReadBook = ({book}) => {
             <div className="col-span-1">
                 <img className="rounded-xl w-full h-full" src={image} alt="" />
             </div>
-            <div className="col-span-4">
+            <div className="col-span-4 ml-0 lg:ml-4">
                 <h2 className="text-2xl font-bold">{bookName}</h2>
                 <p>By: <span className="font-semibold">{author}</span></p>
                 <div className="flex flex-col lg:flex-row items-start lg:items-center pb-2 w-full lg:w-2/3">

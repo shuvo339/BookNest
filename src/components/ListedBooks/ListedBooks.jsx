@@ -19,19 +19,19 @@ const ListedBooks = () => {
   
   const handleSort=(value)=>{
       if(value==1){
-        const sortedBooksRate = readbooks.sort((a,b)=>b.rating-a.rating);
+        const sortedBooksRate = [...readbooks].sort((a,b)=>b.rating-a.rating);
         setReadBooks(sortedBooksRate)
         setWishlist(sortedBooksRate)
         
         
       }
      else if(value==2){
-        const sortedBooksPage = readbooks.sort((a,b)=>b.totalPages-a.totalPages);
+        const sortedBooksPage = [...readbooks].sort((a,b)=>b.totalPages-a.totalPages);
         setReadBooks(sortedBooksPage)
         setWishlist(sortedBooksPage)
       }
       else if(value==3){
-        const sortedBooksYear = readbooks.sort((a,b)=>b.yearOfPublishing-a.yearOfPublishing);
+        const sortedBooksYear = [...readbooks].sort((a,b)=>b.yearOfPublishing-a.yearOfPublishing);
         setReadBooks(sortedBooksYear)
         setWishlist(sortedBooksYear)
       }
@@ -66,7 +66,7 @@ const ListedBooks = () => {
   return (
     <div>
       <div className="bg-pink-50 flex justify-center items-center py-10 rounded-xl">
-        <h2 className="text-4xl font-bold">Books</h2>
+        <h2 className="text-2xl lg:text-4xl font-bold">Bookshelf Delights</h2>
       </div>
 
       <div className="flex justify-center my-8"><details className="dropdown">

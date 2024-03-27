@@ -75,7 +75,7 @@ const PagesToRead = () => {
           ))}
         </Bar>
       </BarChart>
-    </div>
+      </div>
   );
 };
 
