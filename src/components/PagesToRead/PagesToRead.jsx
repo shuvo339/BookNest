@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from "recharts";
+import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from "recharts";
 import { getReadBooksFromLS } from "../../Utils/ReadBooksLS";
 
 const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
@@ -50,9 +50,8 @@ const PagesToRead = () => {
 
   return (
     <div className="flex justify-center my-10">
-      <BarChart
-        width={1100}
-        height={400}
+      <ResponsiveContainer width="95%" height={400}>
+      <BarChart layoyt="vertical"
         data={data}
         margin={{
           top: 20,
@@ -62,7 +61,7 @@ const PagesToRead = () => {
         }}
       >
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
+        <XAxis className="text-xs font-semibold" angle={19} dataKey="name" />
         <YAxis />
         <Bar
           dataKey="uv"
@@ -75,6 +74,7 @@ const PagesToRead = () => {
           ))}
         </Bar>
       </BarChart>
+</ResponsiveContainer>
       </div>
   );
 };
